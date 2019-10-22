@@ -7,4 +7,4 @@ import "./business/about"
 import "./business/team"
 
 
-console.log(5);
+console.log(10);
