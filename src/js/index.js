@@ -5,3 +5,6 @@ import "./business/course"
 import "./business/works"
 import "./business/about"
 import "./business/team"
+
+
+console.log(5);
