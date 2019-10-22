@@ -1,7 +1,171 @@
-#app {
-  width: 100px;
-  height: 100px;
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font: 14px "微软雅黑";
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html #app, body #app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html #app .head, body #app .head {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+html #app .head .headMain, body #app .head .headMain {
+  margin: 0 auto;
+  width: 1100px;
+  height: 80px;
+}
+html #app .head .headMain .logo, body #app .head .headMain .logo {
+  margin-top: 30px;
+  float: left;
+}
+html #app .head .headMain .music, body #app .head .headMain .music {
+  cursor: pointer;
+  margin-top: 45px;
+  margin-left: 5px;
+  width: 14px;
+  height: 14px;
+  float: left;
+  background: url("../../static/img/musicon.gif") no-repeat;
+}
+html #app .head .headMain .nav, body #app .head .headMain .nav {
+  margin-top: 50px;
+  float: right;
+}
+html #app .head .headMain .nav .item, body #app .head .headMain .nav .item {
+  margin-left: 40px;
+  float: left;
+}
+html #app .head .headMain .nav .item > a, body #app .head .headMain .nav .item > a {
+  position: relative;
+}
+html #app .head .headMain .nav .item > a div, body #app .head .headMain .nav .item > a div {
+  color: #009EE0;
+  transition: width 0.5s;
+}
+html #app .head .headMain .nav .item > a div:nth-child(1), body #app .head .headMain .nav .item > a div:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  color: black;
+  overflow: hidden;
+}
+html #app .head .headMain .nav .item:hover > a div:nth-child(1), body #app .head .headMain .nav .item:hover > a div:nth-child(1) {
+  width: 100%;
+}
+html #app .head .headMain .nav .item.active > a div:nth-child(1), body #app .head .headMain .nav .item.active > a div:nth-child(1) {
+  width: 100%;
+}
+html #app .head .headMain .arrow, body #app .head .headMain .arrow {
+  z-index: 9;
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  width: 21px;
+  height: 11px;
+  transition: left 0.5s;
+}
+html #app .content, body #app .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  bottom: 0;
   background-color: gray;
+  overflow: hidden;
+}
+html #app .content .list, body #app .content .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s linear;
+}
+html #app .content .list li, body #app .content .list li {
+  position: relative;
+}
+html #app .content .list li div, body #app .content .list li div {
+  position: absolute;
+  width: 1100px;
+  height: 520px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+html #app .content .list li.home div, body #app .content .list li.home div {
+  background-color: pink;
+}
+html #app .content .list li.course div, body #app .content .list li.course div {
+  background-color: antiquewhite;
+}
+html #app .content .list li.works div, body #app .content .list li.works div {
+  background-color: gainsboro;
+}
+html #app .content .list li.about div, body #app .content .list li.about div {
+  background-color: salmon;
+}
+html #app .content .list li.team div, body #app .content .list li.team div {
+  background-color: turquoise;
+}
+html #app .content .points, body #app .content .points {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -80px;
+}
+html #app .content .points li, body #app .content .points li {
+  margin-bottom: 5px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid pink;
+  border-radius: 50%;
+}
+html #app .content .points li.active, body #app .content .points li.active {
+  background-color: white;
+}
+html #app .content .points li:hover, body #app .content .points li:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.min.css.map */
