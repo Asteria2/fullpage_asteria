@@ -22,18 +22,19 @@ export  default function (e,index) {
 
   switch (dir) {
     case "up":
-      if(index<0){
-        index=0;
-      }else{
+      if(index>0){
         index--;
+      }else{
+        index=0;
       }
       move(index);
       break;
     case "down":
-      if(index>length-1){
-        index=length-1;
-      }else{
+      if(index<length-1){
         index++;
+
+      }else{
+        index=length-1;
       }
       move(index);
       break;

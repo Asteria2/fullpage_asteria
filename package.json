@@ -10,7 +10,7 @@
     "dowebpack": "webpack ./src/js/index.js ./dist/js/index.js",
     "dobabel": "babel ./dist/js/index.js -o ./dist/js/index.min.js",
     "docopy": "node ./util/copy.js",
-    "dosassDev": "sass --watch ./src/css/index.scss ./src/css/index.min.css",
+    "dosassDev": "sass --watch ./src/css/index.scss ./src/css/index.css",
     "dowebpackDev": "webpack --watch ./src/js/index.js ./src/js/index.min.js"
   },
   "keywords": [],
