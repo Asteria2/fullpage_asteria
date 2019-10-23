@@ -103,9 +103,9 @@ html,body{
         top: 0;
         width: 100%;
         transition: top .3s linear;
-        li{
+        & > li{
           position: relative;
-          div{
+          & > div{
             position: absolute;
             width: 1100px;
             height: 520px;
@@ -116,27 +116,27 @@ html,body{
             margin: auto;
           }
           &.home{
-            div{
+            & > div{
               background-color: pink;
             }
           }
           &.course{
-            div{
+            & > div{
               background-color: antiquewhite;
             }
           }
           &.works{
-            div{
+            & > div{
               background-color: gainsboro;
             }
           }
           &.about{
-            div{
+            & > div{
               background-color: salmon;
             }
           }
           &.team{
-            div{
+            & > div{
               background-color: turquoise;
             }
           }
