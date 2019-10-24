@@ -1,10 +1,10 @@
 import move from "../move/move"
-export  default function (e,index) {
-  var contentLiNodes=document.querySelectorAll("html #app .content .list li, body #app .content .list li");
-  var contentNode=document.querySelector("html #app .content, body #app .content");
+export default function (e,index) {
+  var points=document.querySelectorAll("html body #app .content .points li");
+  var content=document.querySelector("html body #app .content ");
+  var length=points.length;
   e=e||event;
   var dir='';
-  var length=contentLiNodes.length;
   if(e.wheelDelta){
     if(e.wheelDelta>0){
       dir="up";
@@ -20,8 +20,13 @@ export  default function (e,index) {
     }
   }
 
+
   switch (dir) {
     case "up":
+      // index--;
+      // if(index<0){
+      //   index=0;
+      // }
       if(index>0){
         index--;
       }else{
@@ -30,14 +35,17 @@ export  default function (e,index) {
       move(index);
       break;
     case "down":
+      // index++;
+      // if(index>length-1){
+      //   index=length-1;
+      // }
       if(index<length-1){
         index++;
-
       }else{
         index=length-1;
       }
       move(index);
       break;
   }
-  contentNode.index=index;
+  content.index=index;
 }

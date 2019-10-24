@@ -1,0 +1,77 @@
+@import "../extend/extend";
+
+#app{
+  .content{
+    .list{
+      .about{
+        & > div{
+          .about-1{
+            margin: 50px 0 100px 50px;
+            @extend .commonTitle;
+          }
+          .about-2{
+            width: 400px;
+            margin-left: 50px;
+            @extend .commonText;
+          }
+          .box{
+            position: relative;
+            width: 260px;
+            height: 200px;
+            border: 5px solid rgba(255,255,255,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            & > span{
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              overflow: hidden;
+              img{
+                transform: scale(1.5);
+                transition: transform .5s linear ;
+              }
+            }
+            & > ul{
+              position: absolute;
+              left:0;
+              top:0;
+              right: 0;
+              bottom: 0;
+              overflow: hidden;
+              & > li{
+                position: relative;
+                overflow: hidden;
+                float: left;
+                & > img{
+                  position: absolute;
+                  left:0;
+                  top: 0;
+                  transition: .5s left,.5s top;
+                }
+              }
+            }
+            &.about-3{
+              position: absolute;
+              left: 750px;
+              top: 50px;
+            }
+            &.about-4{
+              position: absolute;
+              left: 600px;
+              top: 290px;
+            }
+            &:hover{
+              & >span{
+                img{
+                  transform: scale(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

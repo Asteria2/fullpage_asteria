@@ -1,167 +1,180 @@
-@import "./reset/reset";
-@import "./mixin/mixin";
-@import "./extend/extend";
 @import "./business/home";
 @import "./business/course";
 @import "./business/works";
 @import "./business/about";
 @import "./business/team";
+@import "./extend/extend";
+@import "./mixin/mixin";
+@import "./reset/reset";
 
-html,body{
+html{
   width: 100%;
   height: 100%;
   overflow: hidden;
-  #app{
-    position: relative;
+  body{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    .head{
+    #app{
       position: relative;
       width: 100%;
-      background-color: white;
-      .headMain{
-        margin: 0 auto;
-        width: 1100px;
-        height: 80px;
-        .logo{
-          margin-top: 30px;
-          float: left;
-        }
-        .music{
-          cursor: pointer;
-          margin-top: 45px;
-          margin-left:5px;
-          width: 14px;
-          height: 14px;
-          float: left;
-          background: url("../../static/img/musicon.gif") no-repeat;
-        }
-        .nav{
-          margin-top: 50px;
-          float: right;
-          .item{
-            margin-left:40px;
+      height: 100%;
+      overflow: hidden;
+      background-color: gainsboro;
+      .head{
+        position: relative;
+        width: 100%;
+        height:80px;
+        background-color: white !important;
+        .headMain{
+          width: 1100px;
+          height:80px;
+          margin: 0 auto;
+          .logo{
             float: left;
-            & > a{
-              position: relative;
-              div{
-                color: #009EE0;
-                transition: width .5s;
-                &:nth-child(1){
+            margin-top: 30px;
+          }
+          .music{
+            margin-top: 45px;
+            margin-left: 5px;
+            float: left;
+            width: 14px;
+            height: 14px;
+            background:url("../../static/img/musicon.gif");
+            &.active{
+              background:url("../../static/img/musicoff.gif");
+            }
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          .nav{
+            float: right;
+            margin-top: 50px;
+            .item{
+              float: left;
+              margin-left: 40px;
+              & > a{
+                position: relative;
+                .up{
                   position: absolute;
                   left:0;
                   top: 0;
-                  width: 0;
                   color: black;
+                  width: 0;
                   overflow: hidden;
+                  transition: width .5s;
                 }
-              }
-            }
-            &:hover{
-              & > a{
-                div{
-                  &:nth-child(1){
-                    width: 100%;
+                .down{
+                  & > img{
+                    margin-top: 2px;
                   }
                 }
               }
-            }
-            &.active{
-              & > a{
-                div{
-                  &:nth-child(1){
+              &:hover{
+                 & > a{
+                   .up{
+                     width: 100%;
+                   }
+                 }
+               }
+              &.active{
+                & > a{
+                  .up{
                     width: 100%;
                   }
                 }
               }
             }
           }
-        }
-        .arrow{
-          z-index: 9;
-          position: absolute;
-          left:50%;
-          bottom: -11px;
-          width: 21px;
-          height: 11px;
-          transition: left .5s;
+          .arrow{
+            z-index: 9;
+            position: absolute;
+            left:50%;
+            bottom: -11px;
+            width: 21px;
+            height: 11px;
+            background: url("../../static/img/menuIndicator.png");
+            transition: left .5s;
+          }
         }
       }
-    }
-    .content{
-      position: absolute;
-      left:0;
-      right:0;
-      top: 80px;
-      bottom: 0;
-      background-color: gray;
-      overflow: hidden;
-      .list{
+      .content{
         position: absolute;
         left:0;
-        top: 0;
-        width: 100%;
-        transition: top .3s linear;
-        & > li{
-          position: relative;
-          & > div{
-            position: absolute;
-            width: 1100px;
-            height: 520px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-          }
-          &.home{
+        right:0;
+        top: 80px;
+        bottom: 0;
+        overflow: hidden;
+        & > .list{
+          position: absolute;
+          left:0;
+          top: 0;
+          width: 100%;
+          overflow: hidden;
+          transition: top .3s;
+          & > li{
+            position: relative;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
             & > div{
-              background-color: pink;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin:auto;
+              width: 1100px;
+              height: 520px;
             }
-          }
-          &.course{
-            & > div{
-              background-color: antiquewhite;
+            &.home{
+              background-image: url("../../static/img/bg1.jpg");
+              & > div{
+              }
             }
-          }
-          &.works{
-            & > div{
-              background-color: gainsboro;
+            &.course{
+              background-image: url("../../static/img/bg2.jpg");
+              & > div{
+              }
             }
-          }
-          &.about{
-            & > div{
-              background-color: salmon;
+            &.works{
+              background-image: url("../../static/img/bg3.jpg");
+              & > div{
+              }
             }
-          }
-          &.team{
-            & > div{
-              background-color: turquoise;
+            &.about{
+              background-image: url("../../static/img/bg4.jpg");
+              & > div{
+              }
             }
+            &.team{
+              background-image: url("../../static/img/bg5.jpg");
+              & > div{
+              }
+            }
+
           }
         }
-      }
-      .points{
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        margin-top: -80px;
-        li{
-          margin-bottom: 5px;
-          width: 15px;
-          height:15px;
-          border: 5px solid pink;
-          border-radius: 50%;
-          &.active{
-            background-color: white;
-          }
-          &:hover{
-            cursor: pointer;
+        .points{
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          margin-top: -75px;
+          li{
+            margin-bottom: 5px;
+            width: 15px;
+            height: 15px;
+            border: 5px solid pink;
+            border-radius: 50%;
+            &.active{
+              background-color: white;
+            }
+            &:hover{
+              cursor: pointer;
+            }
           }
         }
       }
     }
   }
-
 }
