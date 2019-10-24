@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./business/home";
 import "./business/course";
 import "./business/works";
@@ -5,6 +6,20 @@ import "./business/about";
 import "./business/team";
 import "./frame/frame";
 
+=======
+import homeFn from "./business/home";
+import aboutFn from "./business/about";
+import teamFn from "./business/team";
+import frameFn from "./frame/frame";
+
+window.onload=function(){
+  frameFn();
+  teamFn();
+  aboutFn();
+  homeFn();
+}
+
+>>>>>>> about
 window.onresize=function () {
 
   var liNodes=document.querySelectorAll('html body #app .head .headMain .nav .item');

@@ -1,6 +1,10 @@
 import move from './move/move'
 import callback from './wheel/wheel'
+<<<<<<< HEAD
 window.onload=function () {
+=======
+export default function () {
+>>>>>>> about
   var liNodes=document.querySelectorAll('html body #app .head .headMain .nav .item');
   var arrow=document.querySelector("html body #app .head .headMain .arrow ");
   var music=document.querySelector("html body #app .head .headMain .music");

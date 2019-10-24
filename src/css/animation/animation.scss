@@ -15,3 +15,63 @@
     transform: translateX(0px) rotateY(0deg);
   }
 }
+<<<<<<< HEAD
+=======
+@keyframes leftHide {
+  0%{
+    transform: translateX(0) translateZ(0) rotateY(0);
+    visibility: visible;
+  }
+  50%{
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+}
+@keyframes rightShow {
+  0%{
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50%{
+    transform: translateX(540px) translateZ(-200px) rotateY(-30deg);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes leftShow {
+  0%{
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50%{
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes rightHide {
+   0%{
+     transform: translateX(0) translateZ(0) rotateY(0) scale(1);
+     visibility: visible;
+   }
+   50%{
+     transform: translateX(540px) translateZ(-200px) rotateY(-30deg) scale(1);
+     visibility: visible;
+   }
+   100%{
+     transform: translateX(0) translateZ(-200px) rotateY(0) scale(1);
+     visibility: hidden;
+   }
+ }
+
+>>>>>>> about

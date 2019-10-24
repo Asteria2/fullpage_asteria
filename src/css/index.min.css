@@ -1,4 +1,153 @@
 @charset "UTF-8";
+<<<<<<< HEAD
+=======
+@keyframes move {
+  0% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+  49% {
+    transform: translateX(-399px) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(-400px) rotateY(180deg);
+  }
+  99% {
+    transform: translateX(-1px) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+}
+@keyframes leftHide {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+}
+@keyframes rightShow {
+  0% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(540px) translateZ(-200px) rotateY(-30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes leftShow {
+  0% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes rightHide {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0) scale(1);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(540px) translateZ(-200px) rotateY(-30deg) scale(1);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(-200px) rotateY(0) scale(1);
+    visibility: hidden;
+  }
+}
+#app .content .list .home > div .home-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+#app .content .list .home > div .home-list .home-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font: 60px/520px bold;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+}
+#app .content .list .home > div .home-list .home-item:nth-child(1) {
+  background-color: #dc6c5f;
+}
+#app .content .list .home > div .home-list .home-item:nth-child(2) {
+  background-color: #95dc84;
+}
+#app .content .list .home > div .home-list .home-item:nth-child(3) {
+  background-color: #64b9d2;
+}
+#app .content .list .home > div .home-list .home-item:nth-child(4) {
+  background-color: #000000;
+}
+#app .content .list .home > div .home-list .home-item.active {
+  visibility: visible;
+}
+#app .content .list .home > div .home-list .home-item.leftHide {
+  transform: translateX(0) translateZ(-200px) rotateY(0) scale(1);
+  visibility: hidden;
+  animation: leftHide 1s 1 linear;
+}
+#app .content .list .home > div .home-list .home-item.rightShow {
+  transform: translateX(0) translateZ(0) rotateY(0) scale(1);
+  visibility: visible;
+  animation: rightShow 1s 1 linear;
+}
+#app .content .list .home > div .home-list .home-item.rightHide {
+  transform: translateX(0) translateZ(-200px) rotateY(0) scale(1);
+  visibility: hidden;
+  animation: rightHide 1s 1 linear;
+}
+#app .content .list .home > div .home-list .home-item.leftShow {
+  transform: translateX(0) translateZ(0) rotateY(0) scale(1);
+  visibility: visible;
+  animation: leftShow 1s 1 linear;
+}
+#app .content .list .home > div .home-points {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#app .content .list .home > div .home-points .home-point {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px rgba(25, 25, 25, 0.8);
+}
+#app .content .list .home > div .home-points .home-point.active {
+  background-color: white;
+}
+
+>>>>>>> about
 .clearfix, #app .content .list .works > div .works-2 .adv {
   zoom: 1;
 }
@@ -8,13 +157,21 @@
   clear: both;
 }
 
+<<<<<<< HEAD
 .commonText, #app .content .list .course > div .course-2 {
+=======
+.commonText, #app .content .list .about > div .about-2, #app .content .list .course > div .course-2 {
+>>>>>>> about
   color: white;
   line-height: 1.5;
   font-size: 15px;
 }
 
+<<<<<<< HEAD
 .commonTitle, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+=======
+.commonTitle, #app .content .list .about > div .about-1, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+>>>>>>> about
   color: #009ee0;
   font-size: 80px;
   line-height: 0.8;
@@ -117,13 +274,21 @@
   clear: both;
 }
 
+<<<<<<< HEAD
 .commonText, #app .content .list .course > div .course-2 {
+=======
+.commonText, #app .content .list .about > div .about-2, #app .content .list .course > div .course-2 {
+>>>>>>> about
   color: white;
   line-height: 1.5;
   font-size: 15px;
 }
 
+<<<<<<< HEAD
 .commonTitle, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+=======
+.commonTitle, #app .content .list .about > div .about-1, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+>>>>>>> about
   color: #009ee0;
   font-size: 80px;
   line-height: 0.8;
@@ -148,6 +313,65 @@
     transform: translateX(0px) rotateY(0deg);
   }
 }
+<<<<<<< HEAD
+=======
+@keyframes leftHide {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+}
+@keyframes rightShow {
+  0% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(540px) translateZ(-200px) rotateY(-30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes leftShow {
+  0% {
+    transform: translateX(0) translateZ(-200px) rotateY(0);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(-540px) translateZ(-200px) rotateY(30deg);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(0px) rotateY(0);
+    visibility: visible;
+  }
+}
+@keyframes rightHide {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0) scale(1);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(540px) translateZ(-200px) rotateY(-30deg) scale(1);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0) translateZ(-200px) rotateY(0) scale(1);
+    visibility: hidden;
+  }
+}
+>>>>>>> about
 #app .content .list .works > div .works-1 {
   margin: 50px 0 100px 50px;
 }
@@ -231,13 +455,104 @@
   clear: both;
 }
 
+<<<<<<< HEAD
 .commonText, #app .content .list .course > div .course-2 {
+=======
+.commonText, #app .content .list .about > div .about-2, #app .content .list .course > div .course-2 {
   color: white;
   line-height: 1.5;
   font-size: 15px;
 }
 
+.commonTitle, #app .content .list .about > div .about-1, #app .content .list .course > div .course-1, #app .content .list .works > div .works-1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+#app .content .list .about > div .about-1 {
+  margin: 50px 0 100px 50px;
+}
+#app .content .list .about > div .about-2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#app .content .list .about > div .box {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+#app .content .list .about > div .box > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+#app .content .list .about > div .box > span img {
+  transform: scale(1.5);
+  transition: transform 0.5s linear;
+}
+#app .content .list .about > div .box > ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+#app .content .list .about > div .box > ul > li {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+#app .content .list .about > div .box > ul > li > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s left, 0.5s top;
+}
+#app .content .list .about > div .box.about-3 {
+  position: absolute;
+  left: 750px;
+  top: 50px;
+}
+#app .content .list .about > div .box.about-4 {
+  position: absolute;
+  left: 600px;
+  top: 290px;
+}
+#app .content .list .about > div .box:hover > span img {
+  transform: scale(1);
+}
+
+.clearfix, #app .content .list .works > div .works-2 .adv {
+  zoom: 1;
+}
+.clearfix:after, #app .content .list .works > div .works-2 .adv:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #app .content .list .course > div .course-2, #app .content .list .about > div .about-2 {
+>>>>>>> about
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+<<<<<<< HEAD
 .commonTitle, #app .content .list .course > div .course-1, #app .content .list .works > div .works-1 {
+=======
+.commonTitle, #app .content .list .course > div .course-1, #app .content .list .works > div .works-1, #app .content .list .about > div .about-1 {
+>>>>>>> about
   color: #009ee0;
   font-size: 80px;
   line-height: 0.8;
@@ -334,10 +649,17 @@ html body #app .head .headMain .nav .item > a .up {
   width: 0;
   overflow: hidden;
   transition: width 0.5s;
+<<<<<<< HEAD
 }
 html body #app .head .headMain .nav .item > a .down > img {
   margin-top: 2px;
 }
+=======
+}
+html body #app .head .headMain .nav .item > a .down > img {
+  margin-top: 2px;
+}
+>>>>>>> about
 html body #app .head .headMain .nav .item:hover > a .up {
   width: 100%;
 }
